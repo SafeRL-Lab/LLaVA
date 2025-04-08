@@ -312,13 +312,19 @@ Our base model Vicuna v1.5, which is an instruction-tuned chatbot, will be downl
 
 ### Pretrain (feature alignment)
 
-If you met this issue:
+1. If you met this issue:
 ```
 Exception: cannot import name 'log' from 'torch.distributed.elastic.agent.server.api'
 ```
 
 Try to ```pip install deepspeed==0.14.4```
 
+2. If you met this issue:
+   `
+   RuntimeError: Failed to import transformers.trainer because of the following error (look up to see its traceback):
+cannot import name 'clear_device_cache' from 'accelerate.utils.memory'
+   `
+ change `accelerate 0.21.0` to `pip install -U accelerate==0.32.0`
 
 
 Please download the 558K subset of the LAION-CC-SBU dataset with BLIP captions we use in the paper [here](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain).
