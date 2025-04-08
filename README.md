@@ -326,6 +326,11 @@ cannot import name 'clear_device_cache' from 'accelerate.utils.memory'
    `
  change `accelerate 0.21.0` to `pip install -U accelerate==0.32.0`
 
+3. If you met this issue:
+   `binascii.Error: Incorrect padding`
+
+   Try to use an absolute path.
+
 
 Please download the 558K subset of the LAION-CC-SBU dataset with BLIP captions we use in the paper [here](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain).
 
