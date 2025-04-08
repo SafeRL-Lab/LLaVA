@@ -312,6 +312,15 @@ Our base model Vicuna v1.5, which is an instruction-tuned chatbot, will be downl
 
 ### Pretrain (feature alignment)
 
+If you met this issue:
+```
+Exception: cannot import name 'log' from 'torch.distributed.elastic.agent.server.api'
+```
+
+Try to ```pip install deepspeed==0.14.4```
+
+
+
 Please download the 558K subset of the LAION-CC-SBU dataset with BLIP captions we use in the paper [here](https://huggingface.co/datasets/liuhaotian/LLaVA-Pretrain).
 
 Pretrain takes around 5.5 hours for LLaVA-v1.5-13B on 8x A100 (80G), due to the increased resolution to 336px. It takes around 3.5 hours for LLaVA-v1.5-7B.
