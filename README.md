@@ -82,7 +82,7 @@ cd LLaVA
 
 2. Install Package
 ```Shell
-conda create -n llava python=3.10 -y
+conda create -n llava python=3.9 -y # use 3.9, not 3.10, this can work
 conda activate llava
 pip install --upgrade pip  # enable PEP 660 support
 pip install -e .
